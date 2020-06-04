@@ -2,7 +2,7 @@ Vue.component("button-counter", {
   data: () => {
     return { count: 0 }
   },
-  template: '<button @click="count++">{{ count }} 👏 claps</button>'
+  template: '<button @click="count++"><slot /> claps {{ count }} times 👏</button>'
 })
 
 let app = new Vue({
